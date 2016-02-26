@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      th:inline="text">
+<head>
+  <title>Welcome</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/fontawesome.css}"/>
+
+  <script type="text/javascript" th:src="@{/script/jquery.js}"></script>
+  <script type="text/javascript" th:src="@{/script/bootstrap.js}"></script>
+</head>
+<body role="document">
+<div class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" th:href="@{/}"><i class="fa fa-home"></i></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a th:href="@{/logout}">Sign-out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome</h1>
+    <p>You have successfully authenticated with Spring Security!</p>
+  </div>
+</div>
+
+<div class="navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <p/>
+    <p class="small text-muted">Copyright 2013-[[${#dates.format(#dates.createToday(), "yyyy")}]] Example, Inc. All rights reserved</p>
+  </div>
+</div>
+</body>
+</html>
