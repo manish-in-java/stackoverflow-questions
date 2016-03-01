@@ -43,6 +43,30 @@ public class PersonRepositoryTest
     validate(personRepository.findFirstByFirstName("John"));
   }
 
+  @Test
+  public void testFindFirst1ByFirstName()
+  {
+    validate(personRepository.findFirst1ByFirstName("John"));
+
+    Assert.assertEquals(personRepository.findFirstByFirstName("John"), personRepository.findFirst1ByFirstName("John"));
+  }
+
+  @Test
+  public void testFindTopByFirstName()
+  {
+    validate(personRepository.findTopByFirstName("John"));
+
+    Assert.assertEquals(personRepository.findFirstByFirstName("John"), personRepository.findTopByFirstName("John"));
+  }
+
+  @Test
+  public void testFindTop1ByFirstName()
+  {
+    validate(personRepository.findTop1ByFirstName("John"));
+
+    Assert.assertEquals(personRepository.findTopByFirstName("John"), personRepository.findTop1ByFirstName("John"));
+  }
+
   private void validate(final Person person)
   {
     Assert.assertNotNull(person);
