@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+  <defaultCache diskExpiryThreadIntervalSeconds="300"
+                eternal="false"
+                maxElementsInMemory="100"
+                maxElementsOnDisk="10000000"
+                memoryStoreEvictionPolicy="LRU"
+                timeToIdleSeconds="300"
+                timeToLiveSeconds="300"
+                overflowToDisk="false"/>
+
+  <cache eternal="true"
+         maxElementsInMemory="1000"
+         name="main"
+         overflowToDisk="false"/>
+</ehcache>
