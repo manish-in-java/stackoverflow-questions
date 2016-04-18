@@ -15,7 +15,7 @@
         <property name="autoCommit" value="false"/>
         <property name="connectionTimeout" value="3000"/>
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="jdbcUrl" value="jdbc:h2:mem:36664835-hibernate"/>
+        <property name="jdbcUrl" value="jdbc:h2:mem:36664835"/>
         <property name="maximumPoolSize" value="5"/>
         <property name="minimumIdle" value="1"/>
         <property name="password" value=""/>
