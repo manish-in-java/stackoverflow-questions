@@ -10,4 +10,7 @@ public interface CompanyRepository extends CrudRepository<Company, Long>
 {
   @Query(nativeQuery = true, value = "select id, name from company")
   List<Company> getAll();
+
+  @Query(nativeQuery = true, value = "select id, name from company")
+  List<Object> listAll();
 }
