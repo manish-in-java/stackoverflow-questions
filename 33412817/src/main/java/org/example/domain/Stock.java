@@ -1,10 +1,9 @@
 package org.example.domain;
 
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "stock")
 public class Stock extends Model
 {
   @JoinColumn(name = "product_id", updatable = false)
@@ -12,7 +11,7 @@ public class Stock extends Model
   private Product product;
 
   @Column(name = "quantity")
-  private Long quantity;
+  private long quantity = 0;
 
   Stock()
   {
@@ -32,12 +31,12 @@ public class Stock extends Model
     return product;
   }
 
-  public Long getQuantity()
+  public long getQuantity()
   {
     return quantity;
   }
 
-  public void setQuantity(final Long quantity)
+  public void setQuantity(final long quantity)
   {
     this.quantity = quantity;
   }

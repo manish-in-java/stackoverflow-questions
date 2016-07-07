@@ -37,6 +37,20 @@
     </dependency>
 
     <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
+      <version>2.2.5</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
       <version>${hibernate.version}</version>
@@ -48,6 +62,28 @@
     </dependency>
 
     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jpa</artifactId>
       <version>${spring.data.jpa.version}</version>
@@ -55,11 +91,13 @@
   </dependencies>
 
   <properties>
-    <h2.version>1.4.188</h2.version>
-    <hibernate.version>4.3.10.Final</hibernate.version>
+    <h2.version>1.4.191</h2.version>
+    <hibernate.version>4.3.11.Final</hibernate.version>
     <hibernate.validator.version>5.2.1.Final</hibernate.validator.version>
-    <hikari.version>2.4.1</hikari.version>
-    <spring.data.jpa.version>1.8.1.RELEASE</spring.data.jpa.version>
+    <hikari.version>2.4.6</hikari.version>
+    <junit.version>4.12</junit.version>
+    <spring.version>4.2.6.RELEASE</spring.version>
+    <spring.data.jpa.version>1.9.4.RELEASE</spring.data.jpa.version>
 
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

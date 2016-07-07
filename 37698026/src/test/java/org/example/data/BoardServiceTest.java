@@ -3,6 +3,7 @@ package org.example.data;
 import org.example.domain.Board;
 import org.example.service.BoardService;
 import org.example.service.CommonBoardService;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ import static org.junit.Assert.assertNotNull;
 @Transactional
 public class BoardServiceTest
 {
+  private Board board;
+
   @Autowired
   private BoardRepository boardRepository;
 
@@ -26,15 +29,17 @@ public class BoardServiceTest
   @Autowired
   private CommonBoardService commonBoardService;
 
-  @Test
-  public void testCreateBoardStatusAFK()
+  @Before
+  public void setup()
   {
-    assertEquals(0, boardRepository.count());
-
-    Board board = boardService.startBoard();
+    board = boardService.startBoard();
 
     board = commonBoardService.save(board);
+  }
 
+  @Test
+  public void testSynchronizeBoardStatus()
+  {
     assertNotNull(board.getID());
     assertEquals(1, boardRepository.count());
 

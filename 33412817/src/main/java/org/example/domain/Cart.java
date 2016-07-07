@@ -17,6 +17,7 @@ public class Cart extends Model
     {
       items = new ArrayList<>();
     }
+
     items.add(item);
   }
 
