@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:transaction="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+  <bean id="documentTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+    <constructor-arg ref="mongoFactory"/>
+    <property name="writeConcern" value="FSYNC_SAFE"/>
+    <property name="writeResultChecking" value="EXCEPTION"/>
+  </bean>
+
+  <bean id="fongo" class="com.github.fakemongo.Fongo">
+    <constructor-arg value="Fake Mongo"/>
+  </bean>
+  <bean id="mongo" factory-bean="fongo" factory-method="getMongo"/>
+
+  <bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+    <property name="transactionManager">
+      <bean class="com.atomikos.icatch.jta.UserTransactionManager" init-method="init" destroy-method="close">
+        <property name="forceShutdown" value="false"/>
+      </bean>
+    </property>
+    <property name="userTransaction">
+      <bean class="com.atomikos.icatch.jta.J2eeUserTransaction">
+        <property name="transactionTimeout" value="300"/>
+      </bean>
+    </property>
+    <property name="allowCustomIsolationLevels" value="true"/>
+  </bean>
+
+  <context:annotation-config/>
+  <context:component-scan base-package="org.example"/>
+
+  <mongo:db-factory id="mongoFactory" mongo-ref="mongo"/>
+  <mongo:repositories base-package="org.example.data" mongo-template-ref="documentTemplate"/>
+
+  <transaction:annotation-driven/>
+</beans>
