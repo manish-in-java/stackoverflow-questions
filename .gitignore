@@ -2,7 +2,9 @@
 .project
 .idea/
 .settings/
+jar*
 target/
+war*
 *~
 *.iml
 *.log
