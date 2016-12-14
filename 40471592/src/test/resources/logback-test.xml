@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="message">
+    <encoder>
+      <pattern>%-5p %m%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender class="ch.qos.logback.core.helpers.NOPAppender" name="sink"/>
+
+  <logger additivity="false" level="DEBUG" name="com.welue.diagnostics">
+    <appender-ref ref="sink"/>
+  </logger>
+
+  <root level="DEBUG">
+    <appender-ref ref="message"/>
+  </root>
+</configuration>
