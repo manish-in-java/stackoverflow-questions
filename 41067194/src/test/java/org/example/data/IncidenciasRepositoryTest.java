@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.UUID;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @ContextConfiguration(locations = "classpath:springContext.xml")
@@ -49,7 +50,12 @@ public class IncidenciasRepositoryTest
 
     Long incidenciasID = 0L, tiposIncidenciasID = 0L;
 
-    for (Incidencias incidente : incidenciasRepository.findAll(new Sort("tipo", "id")))
+    Iterable<Incidencias> incidencias = incidenciasRepository.findAll(new Sort("tipo", "id"));
+
+    assertNotNull(incidencias);
+    assertTrue(incidencias.iterator().hasNext());
+
+    for (Incidencias incidente : incidencias)
     {
       assertTrue(tiposIncidenciasID == incidente.getTipo().getID()
                  ? incidenciasID <= incidente.getID()
