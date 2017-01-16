@@ -1,0 +1,33 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.h2database:h2:1.4.193'
+
+    compile 'org.hibernate:hibernate-entitymanager:5.2.5.Final'
+
+    compile 'org.springframework:spring-beans:4.3.4.RELEASE'
+    compile 'org.springframework:spring-context:4.3.4.RELEASE'
+    compile 'org.springframework:spring-context-support:4.3.4.RELEASE'
+    compile 'org.springframework:spring-core:4.3.4.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.3.4.RELEASE'
+    compile 'org.springframework:spring-orm:4.3.4.RELEASE'
+    compile 'org.springframework:spring-tx:4.3.4.RELEASE'
+
+    compile 'org.springframework.data:spring-data-jpa:1.10.6.RELEASE'
+
+    compile 'org.apache.commons:commons-dbcp2:2.1.1'
+
+    testCompile 'junit:junit:4.12'
+
+    testCompile 'org.springframework:spring-test:4.3.4.RELEASE'
+}
