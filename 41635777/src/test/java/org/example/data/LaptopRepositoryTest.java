@@ -1,7 +1,6 @@
 package org.example.data;
 
 import org.example.domain.Laptop;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,22 +17,16 @@ import static org.junit.Assert.*;
 @Transactional
 public class LaptopRepositoryTest
 {
-  private String serialNumber;
-
   @Autowired
   private LaptopRepository repository;
-
-  @Before
-  public void setup()
-  {
-    serialNumber = UUID.randomUUID().toString();
-
-    repository.save(new Laptop(serialNumber));
-  }
 
   @Test
   public void testFindBySerialNumber()
   {
+    final String serialNumber = UUID.randomUUID().toString();
+
+    repository.save(new Laptop(serialNumber));
+
     final Laptop laptop = repository.findBySerialNumber(serialNumber);
 
     assertNotNull(laptop);
