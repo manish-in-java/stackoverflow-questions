@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <title>signin</title>
+    <link rel="icon" type="image/png" th:href="@{/img/icon.png}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+  </head>
+  <body>
+    <!-- page content -->
+    <form class="signin" method="post" th:action="@{/login}">
+    	<label th:utext="#{login}"></label>
+    	<input type="text" name="login" th:placeholder="#{login}"/>
+    	
+    	<label th:utext="#{senha}"></label>
+    	<input type="password" name="senha" th:placeholder="#{senha}"/>
+    	
+    	<button type="submit" th:utext="#{dologin}"></button>
+    </form>
+    <script th:src="@{/js/script.js}"></script>
+  </body>
+</html>

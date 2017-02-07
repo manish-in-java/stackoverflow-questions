@@ -1,0 +1,169 @@
+@CHARSET "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Bahiana|Bangers|Barrio|Montserrat|Ultra|Volkhov');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	height: auto;
+	background-color: black;
+	color: white;
+	font-family: 'Volkhov', serif;
+	font-size: 24px;
+}
+
+.navbar ul {
+	list-style-type: none;
+	align-items: baseline;
+	flex-basis: auto;
+	flex-direction: row;
+	column-gap: 0px;
+}
+
+.navbar ul li {
+	text-align: center;
+}
+
+.main {
+	
+}
+
+.menu {
+	margin-top: 0;
+	background-color: silver;
+	color: black;
+	font-family: 'Ultra', serif;
+	font-size: 24px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.menu ul {
+	list-style-type: none;
+	flex-basis: auto;
+	flex-direction: column;
+}
+
+.menu ul li {
+	text-align: center;
+}
+
+.row:odd {
+	
+}
+
+.row:even{
+	
+}
+
+.row:odd .column:odd {
+	background-color: gainsboro;
+}
+
+.row:odd .column:even {
+	background-color: ghostwhite;
+}
+
+.row:even .column:odd {
+	background-color: ghostwhite;
+}
+
+.row:even .column:odd {
+	background-color: gainsboro;
+}
+
+.column h2 {
+	font-family: 'Ultra', serif;
+	font-size: 16px;
+}
+
+.column img {
+	
+}
+
+.column h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+}
+
+.sidebar {
+	margin-top: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+	height: auto;
+	background-color: silver;
+	color: black;
+	font-family: 'Ultra', serif;
+	font-size: 24px;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	flex-basis: auto;
+	flex-direction: column;
+}
+
+.sidebar ul li {
+	text-align: center;
+}
+
+.signin .signup {
+	border-radius: 12px;
+	border-top: 3px groove grey;
+	border-right: 3px groove grey;
+	border-left: 3px groove grey;
+	border-bottom: 3px groove grey;
+	background-color: gainsboro;
+	float: none;
+	margin: 25% 25% 25% 25%;
+}
+
+.signin .signup label {
+	font-family: 'Barrio', cursive;
+	font-size: 24px;
+	color: grey;
+}
+
+.signin .signup input {
+	border-radius: 12px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: grey;
+}
+
+.signin .signup input:focus {
+	background-color: ivory;
+}
+
+.signin .signup button {
+	border-radius> 12px;
+	box-shadow: 4px 12px lightsteelblue;
+	background-color: grey;
+	font-family: 'Barrio', cursive;
+	font-size: 24px;
+	color: white;
+}
+
+.signin .signup button:hover {
+	background-color: slategray
+}
+
+.signin .signup button:active {
+	box-shadow: 2px 12px lightsteelblue;
+}
+

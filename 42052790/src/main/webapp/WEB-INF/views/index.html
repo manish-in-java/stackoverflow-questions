@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+  <head>
+    <meta charset="utf-8"/>
+    <title>title</title>
+    <link rel="icon" type="image/png" th:href="@{/img/icon.png}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+  </head>
+  <body>
+    <!-- page content -->
+    <nav class="navbar">
+    	<ul>
+    		<li><a href="#">nonono</a></li>
+    		<li><a href="#">nonono</a></li>
+    		<li><a href="#">nonono</a></li>
+    		<li><a href="#">nonono</a></li>
+    		<li><a href="#">nonono</a></li>
+    	</ul>
+    </nav>
+    
+    <section class="main">
+    	<nav class="menu">
+    		<ul class="left">
+    			<li><img th:src="@{/img/logo.png}" width="120" height="240"/></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    		</ul>
+    		
+    		<ul class="right">
+    			<li><a th:href="@{/cart}"><img src="#"/></a></li>
+    			<li><a th:href="@{/order}"><img src="#"/></a></li>
+    			
+    			<li sec:authorize="isAuthenticated()"><span sec:authentication="name"></span></li>
+    			<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><img src="#"/></a></li>
+    			
+    			<li sec:authorize="isAnonymous()"><a th:href="@{/signin}" th:utext="#{signin}"></a></li>
+    			<li sec:authorize="isAnonymous()"><a th:href="@{/signup}" th:utext="#{signup}"></a></li>
+    		</ul>
+    	</nav>
+    	
+    	<div class="row">
+    		<h1>nonono</h1>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    	</div>
+    	
+    	<div class="row">
+    		<h1>nonono</h1>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    	</div>
+    	
+    	<div class="row">
+    		<h1>nonono</h1>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    	</div>
+    	
+    	<div class="row">
+    		<h1>nonono</h1>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    	</div>
+    	
+    	<div class="row">
+    		<h1>nonono</h1>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    		<div class="column">
+    			<h2>nonono</h2>
+    			<img src="#" width="180" height="150"/>
+    			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper diam tellus, in porta est porta ut. Nullam dapibus justo nec nullam.</h3>
+    		</div>
+    	</div>
+    </section>
+    <script th:src="@{/js/script.js}"></script>
+  </body>
+</html>

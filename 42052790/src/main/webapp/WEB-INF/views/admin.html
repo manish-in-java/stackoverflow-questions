@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+  <head>
+    <meta charset="utf-8"/>
+    <title>admin</title>
+    <link rel="icon" type="image/png" th:href="@{/img/icon.png}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+  </head>
+  <body>
+    <!-- page content -->
+    <section class="main">
+    	<nav class="sidebar">
+    		<ul>
+    			<li><img th:src="@{/img/logo.png}" width="120" height="240"/></li>
+    			<li sec:authorize="hasPermission(#user, 'categoria')"><a th:href="@{/categoria}" th:utext="#{categoria}"></a></li>
+    			<li sec:authorize="hasPermission(#user, 'produto')"><a th:href="@{/produto}" th:utext="#{produto}"></a></li>
+    			<li sec:authorize="hasPermission(#user, 'pagina')"><a th:href="@{/pagina}" th:utext="#{pagina}"></a></li>
+    		</ul>
+    		
+    		<hr/>
+    		
+    		<ul>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    			<li><a href="#">nonono</a></li>
+    		</ul>
+    		
+    		<ul>
+    			<li sec:authorize="hasPermission(#user, 'usuario')"><a th:href="@{/usuario}" th:utext="#{usuario}"></a></li>
+    		</ul>
+    	</nav>
+    	
+    	<div class="row">
+    		<h1 th:utext="#{visitas}"></h1>
+    		<canvas id="visitas" width="720" height="300"></canvas>
+    	</div>
+    	
+    	<div class="row">
+    		<h1 th:utext="#{vendas}"></h1>
+    		<canvas id="vendas" width="720" height="300"></canvas>
+    	</div>
+    </section>
+    <script th:src="@{/js/script.js}"></script>
+  </body>
+</html>
