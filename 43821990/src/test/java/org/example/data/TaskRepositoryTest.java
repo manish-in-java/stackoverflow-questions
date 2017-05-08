@@ -45,7 +45,7 @@ public class TaskRepositoryTest
   @Test
   public void testDeleteByStatus()
   {
-    repository.deleteByStatus(1);
+    assertNotEquals(0, repository.deleteByStatus(1));
   }
 
   private int getInt()
