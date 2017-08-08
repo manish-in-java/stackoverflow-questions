@@ -1,0 +1,15 @@
+logging.level.org: FATAL
+spring:
+    datasource:
+        url: jdbc:h2:file:~/mapping_jpa_db
+        username: sa
+        password:
+    jpa:
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate:
+                format_sql: true
+    h2:
+        console:
+            enabled: true
