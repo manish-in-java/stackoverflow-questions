@@ -5,6 +5,9 @@
     <title>Welcome!</title>
   </head>
   <body>
-    <h1>Welcome to private page!</h1>
+    <header><a href="/logout">Logout</a></header>
+    <main>
+      <h1>Welcome to private page!</h1>
+    </main>
   </body>
 </html>
